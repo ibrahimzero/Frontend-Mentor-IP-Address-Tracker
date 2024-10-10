@@ -4,11 +4,15 @@
     margin: 0;
     padding: 0;
 }
+:root{
+    --Very-Dark-Gray: hsl(0, 0%, 17%);
+--Dark-Gray: hsl(0, 0%, 59%);
+}
 body{
     font-family: Rubik;
 }
 header{
-   height: 400px;
+   height:350px;
    background: url(images/pattern-bg-desktop.png) no-repeat fixed;
    background-size: cover;
    display: flex;
@@ -23,6 +27,104 @@ margin: 10px 0;
 
 }
 .search{
-    width: 500px;
+    width: 60%;
     display: flex;
+    height: 50px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+input{
+    width: 90%;
+    padding-inline: 10px;
+    font-size: 22px;
+    color: var(--Very-Dark-Gray);
+}
+input:focus{
+    outline: none;
+    border: none;
+}
+input::placeholder{
+    color: var(--Dark-Gray);
+    font-size: 22px;
+}
+.arrow{
+    width: 10%;
+    background-color: black;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.data-container{
+    height: 150px;
+    position: absolute;
+    background-color: #fff;
+    width: 75%;
+    border-radius: 20px;
+    box-shadow:0px 0px 10px rgb(44, 44, 44) ;
+    top: 276px;
+    padding: 20px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 1rem;
+}
+.data-container .info-title{
+    color: var(--Dark-Gray);
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+}
+.data{
+    width: 250px;
+    
+}
+.data+.data{
+    border-left: 1px solid var(--Dark-Gray);
+}
+.info{
+font-size: 2rem;
+font-weight: 600;
+margin-top:1rem ;
+text-align: center;
+
+}
+@media(max-width:1000px){
+    .search{
+        max-width: 600px;
+    }
+    h1{
+        font-size: 2.4rem;
+    }
+    .data-container{
+        height: 130px;
+    }
+    .info{
+        font-size: 1.5rem;
+    }
+}
+@media(max-width:712px){
+    header{
+        height:250;
+    }
+    .data-container{
+        max-width: 400px;
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    .data+.data{
+        border-left: none;
+
+    }
+    .info{
+        font-size: 1.5rem;
+
+    }
+    input::placeholder{
+        font-size:16px ;
+    }
+    .data-container{
+        top: 174px;
+    }
 }
