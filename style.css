@@ -1,1 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Rubik;
+}
+header{
+   height: 400px;
+   background: url(images/pattern-bg-desktop.png) no-repeat fixed;
+   background-size: cover;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+h1{
+    font-size: 3rem;
+    color: #fff;
+text-align: center;
+margin: 10px 0;
+
+}
+.search{
+    width: 500px;
+    display: flex;
+}
